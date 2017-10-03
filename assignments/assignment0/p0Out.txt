@@ -1,0 +1,4 @@
+My name is Kevin Wilson
+I am running this script from /home/kevineato/projects/cs3423-sysProg/assignments/assignment0
+My username is kevineato
+I am logged into oracle
