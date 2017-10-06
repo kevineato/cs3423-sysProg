@@ -1,7 +1,7 @@
 {
   if ($5 > $4) {
-    split($2, splitname, " ")
-    name = splitname[2]
+    len = split($2, splitname, " ")
+    name = splitname[len]
     printf("sed -Ee 's/EMAIL/%s/g' ", $1)
     printf("-Ee 's/FULLNAME/%s/g' ", $2)
     printf("-Ee 's/TITLE/%s/g' ", $3)

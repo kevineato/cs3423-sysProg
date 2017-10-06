@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# != 1 ]; then
+  echo "Usage: $0 DATE"
+  exit 1
+fi
+
 if [ ! -x Emails ]; then
   mkdir Emails
 elif [ -d Emails ]; then
