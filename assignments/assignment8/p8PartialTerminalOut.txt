@@ -1,0 +1,57 @@
+>>> conc ls -l /bin > Dout/concBin.txt , ls -l /usr/bin > Dout/concUsrBin.txt , ls -l /etc > Dout/concEtc.txt 
+Seq Token
+    0 'conc'
+    1 'ls'
+    2 '-l'
+    3 '/bin'
+    4 '>'
+    5 'Dout/concBin.txt'
+    6 ','
+    7 'ls'
+    8 '-l'
+    9 '/usr/bin'
+   10 '>'
+   11 'Dout/concUsrBin.txt'
+   12 ','
+   13 'ls'
+   14 '-l'
+   15 '/etc'
+   16 '>'
+   17 'Dout/concEtc.txt'
+Command               Begin End   stdin stdout
+ls                       2     3     0      5
+ls                       8     9     0     11
+ls                      14    15     0     17
+25718 25719: ls -l /bin 
+25718 25721: ls -l /usr/bin 
+25718 25722: ls -l /etc 
+>>> conc Data/one < Data/oneIn.txt > Dout/concOne.out , Data/two Data/twoIn.txt > Dout/concTwo.out , Data/three < Data/threeIn.txt > Dout/concThree.out , Data/four < Data/fourIn.txt > Dout/concFour.out
+Seq Token
+    0 'conc'
+    1 'Data/one'
+    2 '<'
+    3 'Data/oneIn.txt'
+    4 '>'
+    5 'Dout/concOne.out'
+    6 ','
+    7 'Data/two'
+    8 'Data/twoIn.txt'
+    9 '>'
+   10 'Dout/concTwo.out'
+   11 ','
+   12 'Data/three'
+   13 '<'
+   14 'Data/threeIn.txt'
+   15 '>'
+   16 'Dout/concThree.out'
+   17 ','
+   18 'Data/four'
+   19 '<'
+   20 'Data/fourIn.txt'
+   21 '>'
+   22 'Dout/concFour.out'
+Command               Begin End   stdin stdout
+Data/one                 0    -1     3      5
+Data/two                 8     8     0     10
+Data/three               0    -1    14     16
+Data/four                0    -1    20     22
